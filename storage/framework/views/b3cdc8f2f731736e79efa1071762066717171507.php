@@ -1,4 +1,5 @@
-<?php if (isset($component)) { $__componentOriginalc3251b308c33b100480ddc8862d4f9c79f6df015 = $component; } ?>
+<?php $__env->startSection('page-content'); ?>
+    <?php if (isset($component)) { $__componentOriginalc3251b308c33b100480ddc8862d4f9c79f6df015 = $component; } ?>
 <?php $component = $__env->getContainer()->make(App\View\Components\GuestLayout::class, [] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('guest-layout'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -7,7 +8,7 @@
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
-    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.auth-card','data' => []] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('auth-card'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -16,9 +17,9 @@
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
-         <?php $__env->slot('logo', null, []); ?> 
-            <a href="/">
-                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+             <?php $__env->slot('logo', null, []); ?> 
+                <a href="/">
+                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.application-logo','data' => ['class' => 'w-20 h-20 fill-current text-gray-500']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('application-logo'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -33,11 +34,11 @@
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-            </a>
-         <?php $__env->endSlot(); ?>
+                </a>
+             <?php $__env->endSlot(); ?>
 
-        <!-- Session Status -->
-        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+            <!-- Session Status -->
+            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.auth-session-status','data' => ['class' => 'mb-4','status' => session('status')]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('auth-session-status'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -53,8 +54,8 @@
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
 
-        <!-- Validation Errors -->
-        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+            <!-- Validation Errors -->
+            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.auth-validation-errors','data' => ['class' => 'mb-4','errors' => $errors]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('auth-validation-errors'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -70,20 +71,20 @@
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
 
-        <form method="POST" action="<?php echo e(route('login')); ?>">
-            <?php echo csrf_field(); ?>
+            <form method="POST" action="<?php echo e(route('login')); ?>">
+                <?php echo csrf_field(); ?>
 
-            <!-- Email Address -->
-            <div>
-                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.label','data' => ['for' => 'email','value' => __('Email')]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+                <!-- Username -->
+                <div>
+                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.label','data' => ['for' => 'username','value' => __('username')]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('label'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['for' => 'email','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(__('Email'))]); ?>
+<?php $component->withAttributes(['for' => 'username','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(__('username'))]); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
@@ -91,26 +92,26 @@
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
 
-                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.input','data' => ['id' => 'email','class' => 'block mt-1 w-full','type' => 'email','name' => 'email','value' => old('email'),'required' => true,'autofocus' => true]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.input','data' => ['id' => 'username','class' => 'block mt-1 w-full','type' => 'username','name' => 'username','value' => old('username'),'required' => true,'autofocus' => true]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('input'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['id' => 'email','class' => 'block mt-1 w-full','type' => 'email','name' => 'email','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(old('email')),'required' => true,'autofocus' => true]); ?>
+<?php $component->withAttributes(['id' => 'username','class' => 'block mt-1 w-full','type' => 'username','name' => 'username','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(old('username')),'required' => true,'autofocus' => true]); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-            </div>
+                </div>
 
-            <!-- Password -->
-            <div class="mt-4">
-                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                <!-- Password -->
+                <div class="mt-4">
+                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.label','data' => ['for' => 'password','value' => __('Password')]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('label'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -126,7 +127,7 @@
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
 
-                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.input','data' => ['id' => 'password','class' => 'block mt-1 w-full','type' => 'password','name' => 'password','required' => true,'autocomplete' => 'current-password']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('input'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -141,25 +142,25 @@
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-            </div>
+                </div>
 
-            <!-- Remember Me -->
-            <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600"><?php echo e(__('Remember me')); ?></span>
-                </label>
-            </div>
+                <!-- Remember Me -->
+                <div class="block mt-4">
+                    <label for="remember_me" class="inline-flex items-center">
+                        <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
+                        <span class="ml-2 text-sm text-gray-600"><?php echo e(__('Remember me')); ?></span>
+                    </label>
+                </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <?php if(Route::has('password.request')): ?>
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="<?php echo e(route('password.request')); ?>">
-                        <?php echo e(__('Forgot your password?')); ?>
+                <div class="flex items-center justify-end mt-4">
+                    <?php if(Route::has('password.request')): ?>
+                        <a class="underline text-sm text-gray-600 hover:text-gray-900" href="<?php echo e(route('password.request')); ?>">
+                            <?php echo e(__('Forgot your password?')); ?>
 
-                    </a>
-                <?php endif; ?>
+                        </a>
+                    <?php endif; ?>
 
-                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.button','data' => ['class' => 'ml-3']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('button'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -168,26 +169,27 @@
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes(['class' => 'ml-3']); ?>
-                    <?php echo e(__('Log in')); ?>
+                        <?php echo e(__('Log in')); ?>
 
-                 <?php echo $__env->renderComponent(); ?>
+                     <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-            </div>
-        </form>
+                </div>
+            </form>
+         <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
      <?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
-<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
-<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
-<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
-<?php endif; ?>
- <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc3251b308c33b100480ddc8862d4f9c79f6df015)): ?>
 <?php $component = $__componentOriginalc3251b308c33b100480ddc8862d4f9c79f6df015; ?>
 <?php unset($__componentOriginalc3251b308c33b100480ddc8862d4f9c79f6df015); ?>
 <?php endif; ?>
-<?php /**PATH /var/www/html/resources/views/auth/login.blade.php ENDPATH**/ ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /var/www/html/resources/views/auth/login.blade.php ENDPATH**/ ?>
