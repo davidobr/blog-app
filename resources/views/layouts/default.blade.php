@@ -30,7 +30,7 @@
             @if (Route::has('login'))
                         @auth
                             <a href="{{ route('dashboard') }}" class="p-2">Dashboard</a>
-                            <form method="POST" action="{{ route('logout') }}">
+                            <form method="POST" action="{{ route('logout') }}" class="inline-block">
                                 @csrf
 
                                 <a href="route('logout')"
