@@ -31,6 +31,20 @@ class AuthenticationTest extends TestCase
         $response->assertRedirect(RouteServiceProvider::HOME);
     }
 
+    public function test_authenticated_users_can_reach_dashboard()
+    {
+        $user = User::factory()->create();
+
+        $response = $this->actingAs($user)->get('/dashboard');
+        $response->assertStatus(200);
+    }
+
+    public function test_non_authenticated_users_cannot_reach_dashboard()
+    {
+        $response = $this->get('/dashboard');
+        $response->assertRedirect(RouteServiceProvider::INDEX);
+    }
+
     public function test_users_can_not_authenticate_with_invalid_password()
     {
         $user = User::factory()->create();

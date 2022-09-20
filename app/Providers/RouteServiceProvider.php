@@ -20,6 +20,13 @@ class RouteServiceProvider extends ServiceProvider
     public const HOME = '/dashboard';
 
     /**
+     * Adding a path for the homepage (index page)
+     * @var string
+     */
+
+     public const INDEX = '/login';
+
+    /**
      * Define your route model bindings, pattern filters, and other route configuration.
      *
      * @return void
