@@ -63,18 +63,21 @@ class ArticlesTest extends TestCase
         $response->assertRedirect('/login');
     }
 
-    /*public function test_article_can_be_viewed()
+    public function test_article_can_be_viewed()
     {
         $user = User::factory()->create();
         $article = Article::factory()->make()->toArray();
         $response = $this->actingAs($user)->post('/create', $article);
-        $article_id = $this->response->article.id;
-        $page = $this->get('view/$article_id');
-    }*/
+        $article_id = "12";
+        $page = $this->get('view?12');
+        $page->assertStatus(200);
+    }
 
     /*public function test_article_creator_can_edit_article()
     {
-
+        $user = User::factory()->create();
+        $article = Article::factory()->make()->toArray();
+        $response = $this->actingAs($user)->post('/view?$article_id', $article);
     }*/
 
     /*public function test_non_authenticated_user_cannot_edit_article()

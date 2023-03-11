@@ -32,8 +32,18 @@ Route::get('/view', [ArticleController::class, 'view_article'],function () {
     return view('view/{article_id}');
 })->name('view');
 
-/*Route::post('/view', [ArticleController::class, 'create_article'], function (){
+Route::post('/view', [ArticleController::class, 'create_article'], function (){
     return view('/view/{article_id}');
+});
+
+Route::get('/edit', [ArticleController::class, 'edit_article'], function () {
+    return view('/edit/{article_id}');
+})->middleware(['auth'])->name('edit');
+
+/*Route::post('/edit', [ArticleController::class, 'edit_article'], function () {
+    return view('/edit/{id}');
 });*/
+
+Route::post('/delete', [ArticleController::class, 'delete_article']);
 
 require __DIR__.'/auth.php';
